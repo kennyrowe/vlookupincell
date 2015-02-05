@@ -3,7 +3,7 @@ Excel function to do a vlookup on multiple values within a single cell
 
 # What this function does:
 
-It takes the value of a cell and splits is up into pieces. Next is does a vlookup of each piece using a range you define. Finally it exports the newly lookuped up values in the same format as the original cell.
+It takes the value of a cell and splits is up into pieces. Next is does a vlookup of each piece using a range and column number you define. Finally it exports the newly lookuped up values in the same format as the original cell.
 
 Example:
 Input cell value: "thing-1,thing-2,thing-3"
