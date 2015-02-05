@@ -8,7 +8,7 @@ It takes the value of a cell and splits is up into pieces. Next is does a vlooku
 Example:
 Input cell value: "thing-1,thing-2,thing-3"
 
-Lookup Range:
+Lookup Range:<br>
 thing-1  |  14
 thing-2  |  21
 thing-3  |  7
