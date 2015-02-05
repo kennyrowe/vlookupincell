@@ -1,0 +1,14 @@
+Function vlookupInCell(val As String, lookup As Excel.Range, col As Integer, delim As String) As String
+  'This function designed to take in the value from a cell, split it using a specified deliminator, then do a vlookup on each piece
+  'the ouput is is a string in the same format as the original cell but replaces all the orginal values with the vlookup values
+  Dim tempValue As String
+  Dim arrValues() As String
+  ' split input cell into an array using delim
+  arrValues = Split(val, delim)
+  ' loop through each value, do a vlookup using the lookup range and build output string
+  For Each Item In arrValues
+  On Error Resume Next
+    tempValues = tempValues & Application.WorksheetFunction.VLookup(Item, lookup, col, False) & delim
+  Next
+  vlookupInCell = Left(tempValues, Len(tempValues) - Len(delim))
+End Function

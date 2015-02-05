@@ -9,33 +9,18 @@ Example:
 Input cell value: "thing-1,thing-2,thing-3"
 
 Lookup Range:
-        Column A | Column B
-ROW 1   thing-1  |  14
-ROW 2   thing-2  |  21
-ROW 3   thing-3  |  7
-ROW 4   thing-4  |  1001
+thing-1  |  14
+thing-2  |  21
+thing-3  |  7
+thing-4  |  1001
+
+Column: 2
 
 Deliminator: ","
 
-=vlookupincell(cell, range, deliminator)
+=vlookupincell(cell, range, column, deliminator)
 
 For this example the output would be: 14,21,7,1001
-
-# VB code
-
-Function vlookupInCell(rng As Excel.Range, lookup As Excel.Range, delim As String) As String
-  'This function designed to take in the value from a cell, split it using a specified deliminator, then do a vlookup on each
-  'piece the output is is a string in the same format as the original cell but replaces all the original values with the vlookup values
-  Dim tempValue As String
-  Dim arrValues() As String
-  ' split input cell into an array using delim
-  arrValues = Split(rng, delim)
-  ' loop through each value, do a vlookup using the lookup range and build output string
-  For Each Item In arrValues
-    tempValues = tempValues & Application.WorksheetFunction.VLookup(Item, lookup, 2, False) & delim
-  Next
-  vlookupInCell = Left(tempValues, Len(tempValues) - Len(delim))
-End Function
 
 #You can install this code in one of two ways
 
