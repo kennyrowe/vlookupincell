@@ -16,9 +16,9 @@ thing-4  |  1001<br>
 
 Column: 2
 
-Deliminator: ","
+Delimiter: ","
 
-=vlookupincell(cell, range, column, deliminator)
+=vlookupincell(cell, range, column, delimiter)
 
 For this example the output would be: 14,21,7,1001
 
